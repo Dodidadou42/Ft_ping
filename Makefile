@@ -19,10 +19,10 @@ all:    ${NAME}
 ${NAME}:    ${OBJS}
 			@echo "${GREEN}Objects OK"
 			@tput cuu1 && tput dl1
-			@echo "${WHITE}Compiling ft_ping..."
+			@echo "${WHITE}Compiling ${NAME}..."
 			@${CC} ${INCLUDES}  ${CFLAGS} ${OBJS} -o ${NAME}
 			@tput cuu1 && tput dl1
-			@echo "${GREEN}ft_ping OK${WHITE}"
+			@echo "${GREEN}${NAME} OK${WHITE}"
 
 .c.o:  
 		@echo "${WHITE}Compiling object $<"
@@ -36,10 +36,10 @@ clean:
 		@echo "${YELLOW}Objects cleaned"
 
 fclean: clean
-		@echo "${WHITE}Cleaning ft_ping"
+		@echo "${WHITE}Cleaning ${NAME}"
 		@rm -f ${NAME}
 		@tput cuu1 && tput dl1
-		@echo "${YELLOW}ft_ping cleaned${WHITE}"
+		@echo "${YELLOW}${NAME} cleaned${WHITE}"
 
 re: fclean all
 
